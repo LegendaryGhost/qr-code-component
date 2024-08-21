@@ -96,8 +96,8 @@ body {
 }
 
 .card-content {
-    -webkit-padding-start: var(--small-spacing);
-    padding-inline-start: var(--small-spacing);
+    -webkit-padding-inline: var(--small-spacing);
+    padding-inline: var(--small-spacing);
     text-align: center;
 }
 
