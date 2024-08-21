@@ -1,0 +1,98 @@
+/* Font family */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* Main style and variables */
+:root {
+    --navy: #1F314F;
+    --grey: #68778D;
+    --light-grey: #D5E1EF;
+    --white: #FFFFFF;
+
+    --small-spacing: 16px;
+    --medium-spacing: 24px;
+    --large-spacing: 40px;
+
+    --outer-border-radius: 20px;
+    --inner-border-radius: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    font-optical-sizing: auto;
+    font-size: 15px;
+    line-height: 1.4;
+    letter-spacing: 0.2px;
+
+    background-color: var(--light-grey);
+    display: grid;
+    place-items: center;
+    min-height: 100dvh;
+    min-height: 100vh;
+}
+
+/* Animation */
+@keyframes fade-in {
+    from {
+        transform: translateY(15%);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Specific style */
+.card {
+    background-color: var(--white);
+    width: 320px;
+    padding: var(--small-spacing);
+    padding-bottom: var(--large-spacing);
+    border-radius: var(--outer-border-radius);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.05);
+
+    animation: fade-in .8s .2s ease-out both;
+}
+
+.card-img {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: var(--inner-border-radius);
+    margin-bottom: var(--medium-spacing);
+}
+
+.card-content {
+    padding-inline-start: var(--small-spacing);
+}
+
+.card-content h1 {
+    margin-bottom: var(--small-spacing);
+    font-size: 22px;
+    line-height: 1.2;
+    letter-spacing: 0;
+    font-weight: bold;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0;
+    padding: var(--small-spacing);
+}
+
+.attribution a {
+    text-decoration: none;
+    color: var(--navy);
+}
+
+@media (max-height: 600px) {
+    .attribution {
+        position: static;
+    }
+}
