@@ -118,6 +118,7 @@ body {
     position: absolute;
     bottom: 0;
     padding: var(--small-spacing);
+    color: var(--grey);
 }
 
 .attribution a {
