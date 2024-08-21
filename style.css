@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* Font family */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
@@ -19,6 +26,7 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -30,20 +38,36 @@ body {
     letter-spacing: 0.2px;
 
     background-color: var(--light-grey);
+    display: -ms-grid;
     display: grid;
     place-items: center;
-    min-height: 100dvh;
     min-height: 100vh;
+    min-height: 100dvh;
 }
 
 /* Animation */
-@keyframes fade-in {
+@-webkit-keyframes fade-in {
     from {
+        -webkit-transform: translateY(15%);
         transform: translateY(15%);
         opacity: 0;
     }
 
     to{
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes fade-in {
+    from {
+        -webkit-transform: translateY(15%);
+        transform: translateY(15%);
+        opacity: 0;
+    }
+
+    to{
+        -webkit-transform: translateY(0);
         transform: translateY(0);
         opacity: 1;
     }
@@ -56,7 +80,10 @@ body {
     padding: var(--small-spacing);
     padding-bottom: var(--large-spacing);
     border-radius: var(--outer-border-radius);
+    -webkit-box-shadow: 0 25px 25px rgba(0, 0, 0, 0.05);
     box-shadow: 0 25px 25px rgba(0, 0, 0, 0.05);
+
+    -webkit-animation: fade-in .8s .2s ease-out both;
 
     animation: fade-in .8s .2s ease-out both;
 }
@@ -69,6 +96,7 @@ body {
 }
 
 .card-content {
+    -webkit-padding-start: var(--small-spacing);
     padding-inline-start: var(--small-spacing);
 }
 
